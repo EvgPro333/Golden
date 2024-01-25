@@ -1,0 +1,118 @@
+<div class="page">
+	<div class="page_content">
+
+{{!-- ! ######################################################## HEADER --}}
+		<header class="page_block">
+			{{!-- ============================== --}}
+			<div class="header_content">
+				<nav class="">
+					<a href="{{logo.url}}" class="logo">
+						<div class="logo_item">
+							{{!-- <span class=""> golden </span> --}}
+						</div> 
+					</a>
+					<div class="header_nav_right">
+						<div class="nav {{#if isVertical}}nav_vertical{{else}}nav_inline{{/if}}">
+							{{#each header}}
+								<a href="{{url}}" class="nav_link"> {{text}} </a>
+							{{/each}}
+						</div>
+					</div>
+				</nav>
+			</div>
+			{{!-- ============================== --}}
+			<div class="hero">
+				<p class="hero_text"> {{hero_text}} </p>
+				<h1 class="hero_title"> {{hero_title}} </h1>
+			</div>
+			{{!-- ============================== --}}
+			<div>
+				<a href="http://google.com" type="button" class="more">Tell Me More</a>
+			</div>
+		</header>
+		</div>
+
+{{!-- ! ######################################################## MAIN --}}
+
+		<main class="page_block">
+			<div class="main">
+				{{!-- ======================= services--}}
+				{{#with blockServices}}
+					<div class="block_services">
+						<div class="bloc_services">
+							<div class="services">
+								<h5 class="services_title"> {{title}} </h5>
+								<p class="services_text"> {{text}} </p>
+							</div>
+							{{!-- =======================cards --}}
+							<div class="services-body">
+								{{#each services}}
+									{{> default-card}}
+								{{/each}}
+							</div>
+							{{!-- ============================== --}}
+						</div>
+					</div>
+				{{/with}}
+				
+				{{!-- ======================= Our portfolio--}}
+				{{#with blockPortfolio}}
+					<div class="block_portfolio">
+						<div class="bloc_portfolio">
+							<div class="portfolio">
+								<h3 class="portfolio_title"> {{title}} </h3>
+								<p class="portfolio_sub_title"> {{text}} </p>
+							</div>
+							{{!-- =======================cards --}}
+							<div class="portfolio-body">
+								{{#each portfolio}}
+									{{> default-card}}
+								{{/each}}
+							</div>
+							{{!-- ============================== --}}
+						</div>
+					</div>
+				{{/with}}
+				
+				{{!-- ======================= Our portfolio--}}
+				{{#with blockAbout}}
+					<div class="block_about">
+						<div class="bloc_about">
+							<div class="about">
+								<h3 class="about_title"> {{title}} </h3>
+								<p class="about_sub_title"> {{text}} </p>
+							</div>
+							{{!-- =======================cards --}}
+							<div class="about-body">
+								{{#each about}}
+									{{> default-card}}
+								{{/each}}
+							</div>
+							{{!-- ============================== --}}
+						</div>
+					</div>
+				{{/with}}
+			</div>
+		</main>
+{{!-- <hr> --}}
+{{!-- ! ########################################################################################## FOOTER --}}
+		<footer class="page_block">
+			<div class="footer">
+				{{Copyright}}
+			</div>
+		</footer>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
